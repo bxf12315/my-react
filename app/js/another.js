@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Clock from "./components/Clock.js";
 import App from "./components/Props.js";
+import LifeCyclClock from "./components/LifeCyclClock.js";
 
 ReactDOM.render(
   <h1>Hello World Demo22222222</h1>,
@@ -22,7 +23,7 @@ ReactDOM.render(
     );
   }
    
-  setInterval(tick, 1000);
+  setImmediate(tick);
 
  function propsTest() {
      ReactDOM.render(
@@ -30,5 +31,11 @@ ReactDOM.render(
         document.getElementById("propstest")
      );
  }
-
  setImmediate(propsTest);
+
+
+ 
+  ReactDOM.render(
+    <LifeCyclClock />,
+    document.getElementById("lifeCyclClock")
+  );
